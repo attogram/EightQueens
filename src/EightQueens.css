@@ -1,16 +1,9 @@
 .EightQueens {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  font-size: calc(10px + 2vmin);
-  justify-content: center;
-  min-height: 100vh;
-  text-align: center;
+  margin: 0;
+  padding: 0;
 }
 
-.EightQueens-header, .EightQueens-header a {
-  font-size: 70%;
-  font-family: monospace;
-  margin-bottom: 20px;
-  text-decoration: none;
+.EightQueens-header {
+  display: flex;
+  flex-wrap: wrap;
 }

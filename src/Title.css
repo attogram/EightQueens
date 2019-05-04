@@ -1,0 +1,16 @@
+.EightQueens-title {
+    border: 1px solid darkslategrey;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+    padding: 8px;
+}
+
+.EightQueens-title a {
+    text-decoration: none;
+}
+
+.EightQueens-title small {
+    font-size: 12px;
+    font-weight: normal;
+}

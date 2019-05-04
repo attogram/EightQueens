@@ -1,6 +1,6 @@
 # Eight Queens
 
-## Alpha Release
+_Alpha Release - working towards a Minimum Viable Game_
 
 Welcome to the **Eight Queens** chess game.
 
@@ -9,7 +9,27 @@ Welcome to the **Eight Queens** chess game.
 Place eight queens onto the chess board, 
 with none of the queens under attack!
 
+Live demo:
+**<https://attogram.github.io/EightQueens/>**
+
+## Deployment
+
+### Pre-built version
+
+The `gh-pages` branch contains a pre-built
+version of **Eight Queens** ready for deployment to your web server.
+
+See: <https://github.com/attogram/EightQueens/tree/gh-pages>
+
+## License
+
+**Eight Queens** is an open source project
+licensed under the MIT License.
+
 ## Developer Info
+
+The main Eight Queens Git repository is:
+<https://github.com/attogram/EightQueens>
 
 Eight Queens is built with [React](https://reactjs.org/).
 
