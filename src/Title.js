@@ -1,22 +1,24 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './Title.css';
 
-const version = '0.0.2';
-
-function Title() {
-    return (
-        <div className="EightQueens-title">
-            <a
-                href="https://github.com/attogram/EightQueens"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                Eight Queens
-                <br />
-                <small>v{version}</small>
-            </a>
-        </div>
-    );
+class Title extends Component {
+    render() {
+        return (
+            <div className="EightQueens-title">
+                <a
+                    href={this.props.gameHome}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    {this.props.gameName}
+                    <br />
+                    <small>
+                        v{this.props.gameVersion}
+                    </small>
+                </a>
+            </div>
+        );
+    }
 }
 
 export default Title;

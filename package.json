@@ -1,13 +1,17 @@
 {
-  "name": "attogram-chess",
-  "version": "0.0.1-alpha",
+  "name": "eight-queens",
+  "version": "0.0.3",
   "private": true,
   "homepage": ".",
   "dependencies": {
-    "chessboardjsx": "^2.3.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-scripts": "3.0.0"
+    "react-scripts": "3.0.0",
+    "deep-diff": "1.0.1",
+    "lodash.isequal": "4.5.0",
+    "react-dnd": "2.6.0",
+    "react-dnd-html5-backend": "4.0.5",
+    "react-dnd-multi-backend": "3.1.2"
   },
   "scripts": {
     "start": "react-scripts start",

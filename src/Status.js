@@ -1,18 +1,19 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './Status.css';
 
-function Status() {
+class Status extends Component {
 
-
-    return (
-        <div className="EightQueens-status">
-            Queens on board: XX
-            <br />
-            Queens under attack: XX, XX, XX
-            <br />
-            Not Solved
-        </div>
-    );
+    render() {
+        return (
+            <div className="EightQueens-status">
+                Queens on board: XX
+                <br/>
+                Queens under attack: XX, XX, XX
+                <br/>
+                Not Solved
+            </div>
+        );
+    }
 }
 
 export default Status;
