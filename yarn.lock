@@ -2368,6 +2368,17 @@ chardet@^0.7.0:
   resolved "https://registry.yarnpkg.com/chardet/-/chardet-0.7.0.tgz#90094849f0937f2eedc2425d0d28a9e5f0cbad9e"
   integrity sha512-mT8iDcrh03qDGRRmoA2hmBJnxpllMR+0/0qlzjqZES6NdiWDcZkCNAk4rPFZ9Q85r27unkiNNg8ZOiwZXBHwcA==
 
+chessboardjsx@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/chessboardjsx/-/chessboardjsx-2.3.0.tgz#b0636de42824be7d7f4ea42c08d154481c7ed1f4"
+  integrity sha512-TxjWzgPtUtzf3jDcXAMSiqWVFEMo6BqGasGe6UBXvpwYHVRbmvgVlcA1VYTpRVDkJT6FkCK0QVNNjFgM+UA+eA==
+  dependencies:
+    deep-diff "1.0.1"
+    lodash.isequal "4.5.0"
+    react-dnd "2.6.0"
+    react-dnd-html5-backend "4.0.5"
+    react-dnd-multi-backend "3.1.2"
+
 chokidar@^2.0.0, chokidar@^2.0.2, chokidar@^2.0.4:
   version "2.1.5"
   resolved "https://registry.yarnpkg.com/chokidar/-/chokidar-2.1.5.tgz#0ae8434d962281a5f56c72869e79cb6d9d86ad4d"
