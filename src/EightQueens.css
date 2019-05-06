@@ -1,7 +1,8 @@
 .EightQueens {
+  align-items: center;
   display: flex;
-  justify-content: center;
   flex-direction: column;
+  justify-content: center;
 }
 
 .EightQueens-header {
