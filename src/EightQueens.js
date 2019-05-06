@@ -5,21 +5,29 @@ import Title from './Title.js';
 import Status from './Status.js';
 
 const gameName     = 'Eight Queens';
-const gameVersion  = '0.0.4';
+const gameVersion  = '0.0.5';
 const gameHome     = 'https://github.com/attogram/EightQueens';
 
 class EightQueens extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            clicked: ''
+            clicked: 'Click any square to place a Queen',
+            position: {}
         }
     }
 
     onSquareClick = square => {
+        let position = this.state.position;
+        if (position[[square]]) {
+            delete position[[square]];
+        } else {
+            position[[square]] = 'wQ';
+        }
         this.setState(
             {
-                clicked: square
+                clicked: square,
+                position: position,
             }
         );
     };
@@ -35,10 +43,12 @@ class EightQueens extends Component {
                     />
                     <Status
                         clicked={this.state.clicked}
+                        position={this.state.position}
                     />
                 </div>
                 <Chessboard
                     id="EightQueens"
+                    position={this.state.position}
                     sparePieces={false}
                     draggable={false}
                     calcWidth={({screenWidth}) => (screenWidth < 500 ? 350 : 480)}

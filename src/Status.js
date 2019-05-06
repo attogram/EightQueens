@@ -6,7 +6,9 @@ class Status extends Component {
     render() {
         return (
             <div className="EightQueens-status">
-                Clicked: <b>{this.props.clicked}</b>
+                <b>{this.props.clicked}</b>
+                <br />
+                {JSON.stringify(this.props.position)}
             </div>
         );
     }
