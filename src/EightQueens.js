@@ -3,9 +3,10 @@ import './EightQueens.css';
 import Chessboard from 'chessboardjsx';
 import Title from './Title.js';
 import Status from './Status.js';
+import * as attack from './UnderAttack.js';
 
 const gameName     = 'Eight Queens';
-const gameVersion  = '0.0.6';
+const gameVersion  = '0.0.7';
 const gameHome     = 'https://github.com/attogram/EightQueens';
 
 class EightQueens extends Component {
@@ -13,7 +14,8 @@ class EightQueens extends Component {
         super(props);
         this.state = {
             clicked: '',
-            position: {}
+            position: {},
+            attacked: {}
         }
     }
 
@@ -28,6 +30,7 @@ class EightQueens extends Component {
             {
                 clicked: square,
                 position: position,
+                attacked: attack.underAttack(this.state.position)
             }
         );
     };
@@ -42,8 +45,8 @@ class EightQueens extends Component {
                         gameVersion={gameVersion}
                     />
                     <Status
-                        clicked={this.state.clicked}
                         position={this.state.position}
+                        attacked={this.state.attacked}
                     />
                 </div>
                 <Chessboard
