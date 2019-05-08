@@ -7,8 +7,9 @@ import Title from './Title.js';
 import queenUnderAttackSvg from './queenUnderAttack.svg';
 
 const gameName     = 'Eight Queens';
-const gameVersion  = '0.0.8';
+const gameVersion  = '0.0.9';
 const gameHome     = 'https://github.com/attogram/EightQueens';
+const debugMode    = true;
 
 class EightQueens extends Component {
     constructor(props) {
@@ -16,18 +17,17 @@ class EightQueens extends Component {
         this.state = {
             attacked: [], // Array of queens under attack
             position: {}, // Object of current board position
-            status: '', // String of Game Status
         }
     }
 
     onSquareClick = square => {
+        debug('onSquareClick: ' + square);
         let position = this.state.position; // Get current position
+        debug('onSquareClick: starting position: ' + JSON.stringify(position));
         if (position[[square]]) {
             delete position[[square]]; // clicked Queen, remove it
         } else {
             if (Object.keys(position).length === 8) {
-                this.setState({status: 'Click a queen to delete it'});
-
                 return;
             }
             position[[square]] = 'wQ'; // clicked Empty Square, add a Queen
@@ -35,18 +35,22 @@ class EightQueens extends Component {
 
         const attacked = attack.underAttack(position);
         attacked.forEach(function(square) {
+            debug('onSquareClick: set to bQ: ' + square);
             position[square] = 'bQ'; // flip queens under attack
         });
 
+        debug('onSquareClick: setState : attacked: ' + JSON.stringify(attacked));
+        debug('onSquareClick: setState : position: ' + JSON.stringify(position));
         this.setState({
             attacked: attacked,
             position: position,
             status: '',
         });
-
     };
 
     render() {
+        debug('render       : this.state.attacked: ' + JSON.stringify(this.state.attacked));
+        debug('render       : this.state.position: ' + JSON.stringify(this.state.position));
         return (
             <div className="EightQueens">
                 <div className="EightQueens-header">
@@ -85,13 +89,17 @@ class EightQueens extends Component {
                     - Click a square to place a Queen<br />
                     - Click a Queen to remove it
                 </p>
-                <small>
-                p: {JSON.stringify(this.state.position)}<br />
-                a: {JSON.stringify(this.state.attacked)}
-                </small>
             </div>
         );
     }
 }
 
 export default EightQueens;
+
+export function debug(message) {
+    if (!debugMode) {
+        return;
+    }
+    const stamp = new Date();
+    console.log(stamp.toISOString() + ': ' + message);
+}

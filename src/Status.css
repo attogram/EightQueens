@@ -4,12 +4,14 @@
 }
 
 .EightQueens-playing {
-    background-color: #eeeeee;
+    background-color: #fcebb4;
     color: black;
+    padding: 2px;
 }
 
 .EightQueens-win {
     background-color: black;
-    color: lightgreen;
+    color: #00ee00;
     font-weight: bold;
+    padding: 2px;
 }

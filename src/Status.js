@@ -9,13 +9,19 @@ class Status extends Component {
         if (this.props.attacked) {
             numberQueensUnderAttack = this.props.attacked.length;
         }
-        let gameStatus = this.props.status;
-        let statusClass = '';
-        if (!gameStatus) {
-            statusClass = 'EightQueens-playing';
+
+        const numberQueensNeeded = 8 - numberQueensOnBoard;
+        let gameStatus = '♕ add ' + numberQueensNeeded + ' more Queen';
+        if (numberQueensNeeded > 1) {
+            gameStatus += 's';
         }
+        if (!numberQueensNeeded) {
+            gameStatus = '🙁 Not Solved'
+        }
+
+        let statusClass = 'EightQueens-playing';
         if ( numberQueensOnBoard === 8 && numberQueensUnderAttack === 0) {
-            gameStatus = ' SOLVED! YOU WIN! ';
+            gameStatus = '😃 SOLVED! YOU WIN! ';
             statusClass = 'EightQueens-win';
         }
 
