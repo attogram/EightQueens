@@ -11,8 +11,7 @@ export function underAttack(position) {
     return attacked;
 }
 
-export function getQueenPaths(square)
-{
+export function getQueenPaths(square) {
     const col = square.substr(0,1); // Column, File, Letter
     const row = parseInt(square.substr(1,1)); // Row, Rank, Number
 

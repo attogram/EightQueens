@@ -9,12 +9,23 @@ class Status extends Component {
         if (this.props.attacked) {
             numberQueensUnderAttack = this.props.attacked.length;
         }
+        let gameStatus = this.props.status;
+        let statusClass = '';
+        if (!gameStatus) {
+            statusClass = 'EightQueens-playing';
+        }
+        if ( numberQueensOnBoard === 8 && numberQueensUnderAttack === 0) {
+            gameStatus = ' SOLVED! YOU WIN! ';
+            statusClass = 'EightQueens-win';
+        }
+
         return (
             <div className="EightQueens-status">
                 <b>{numberQueensOnBoard}</b> Queens on board
                 <br />
                 <b>{numberQueensUnderAttack}</b> Queens under attack
-                <br />{JSON.stringify(this.props.attacked)}
+                <br />
+                <div className={statusClass}>{gameStatus}</div>
             </div>
         );
     }

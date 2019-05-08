@@ -2,3 +2,14 @@
     font-size: 14px;
     padding: 8px;
 }
+
+.EightQueens-playing {
+    background-color: #eeeeee;
+    color: black;
+}
+
+.EightQueens-win {
+    background-color: black;
+    color: lightgreen;
+    font-weight: bold;
+}
