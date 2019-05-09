@@ -1,6 +1,6 @@
 # Eight Queens
 
-_Alpha Release - working towards a Minimum Viable Game_
+_Beta Release_
 
 Welcome to the **Eight Queens** chess game.
 
@@ -35,9 +35,13 @@ Eight Queens is built with [React](https://reactjs.org/).
 
 Eight Queens was bootstrapped with [create-react-app](https://facebook.github.io/create-react-app/)
 
-### Scripts
+### Install dependencies
 
-#### `yarn build` or `npm run build`
+* `yarn` or `npm install`
+
+### Build
+
+* `yarn build` or `npm run build`
 
 This builds Eight Queens for production to the `build` folder.
 
@@ -47,7 +51,9 @@ The build is minified and the filenames include the hashes.
 
 Once built, Eight Queens is ready to be deployed to any **web server**!
 
-#### `yarn start` or `npm start`
+### Dev server
+
+* `yarn start` or `npm start`
 
 Runs Eight Queens in the development mode.
 
@@ -57,6 +63,8 @@ The page will reload if you make edits.
 
 You will also see any lint errors in the console.
 
-#### `yarn test` or `npm test`
+### Test watch
+ 
+* `yarn test` or `npm test`
 
 Launches the test runner in the interactive watch mode.

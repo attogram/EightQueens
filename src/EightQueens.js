@@ -7,7 +7,7 @@ import Title from './Title.js';
 import queenUnderAttackSvg from './queenUnderAttack.svg';
 
 const gameName     = 'Eight Queens';
-const gameVersion  = '0.0.9';
+const gameVersion  = '0.0.10';
 const gameHome     = 'https://github.com/attogram/EightQueens';
 const debugMode    = true;
 
@@ -16,41 +16,45 @@ class EightQueens extends Component {
         super(props);
         this.state = {
             attacked: [], // Array of queens under attack
-            position: {}, // Object of current board position
+            position: {}  // Object of current board position
         }
     }
 
     onSquareClick = square => {
-        debug('onSquareClick: ' + square);
-        let position = this.state.position; // Get current position
-        debug('onSquareClick: starting position: ' + JSON.stringify(position));
+        let position = this.state.position;
         if (position[[square]]) {
-            delete position[[square]]; // clicked Queen, remove it
+            debug('Deleting Queen: ' + square);
+            delete position[[square]];
         } else {
             if (Object.keys(position).length === 8) {
                 return;
             }
-            position[[square]] = 'wQ'; // clicked Empty Square, add a Queen
+            debug('Adding Queen: ' + square);
+            position[[square]] = 'wQ';
         }
 
         const attacked = attack.underAttack(position);
         attacked.forEach(function(square) {
-            debug('onSquareClick: set to bQ: ' + square);
+            debug('UNDER ATTACK: ' + square);
             position[square] = 'bQ'; // flip queens under attack
         });
 
-        debug('onSquareClick: setState : attacked: ' + JSON.stringify(attacked));
-        debug('onSquareClick: setState : position: ' + JSON.stringify(position));
         this.setState({
             attacked: attacked,
-            position: position,
-            status: '',
+            position: position
         });
     };
 
     render() {
-        debug('render       : this.state.attacked: ' + JSON.stringify(this.state.attacked));
-        debug('render       : this.state.position: ' + JSON.stringify(this.state.position));
+        debug('render: this.state.attacked: ' + JSON.stringify(this.state.attacked));
+        debug('render: this.state.position: ' + JSON.stringify(this.state.position));
+
+        const queensOnBoard = Object.keys(this.state.position).length;
+        let queensUnderAttack = 0;
+        if (this.state.attacked) {
+            queensUnderAttack = this.state.attacked.length;
+        }
+
         return (
             <div className="EightQueens">
                 <div className="EightQueens-header">
@@ -60,8 +64,8 @@ class EightQueens extends Component {
                         gameVersion={gameVersion}
                     />
                     <Status
-                        attacked={this.state.attacked}
-                        position={this.state.position}
+                        queensOnBoard={queensOnBoard}
+                        queensUnderAttack={queensUnderAttack}
                     />
                 </div>
                 <Chessboard

@@ -4,13 +4,8 @@ import './Status.css';
 class Status extends Component {
 
     render() {
-        const numberQueensOnBoard = Object.keys(this.props.position).length;
-        let numberQueensUnderAttack = 0;
-        if (this.props.attacked) {
-            numberQueensUnderAttack = this.props.attacked.length;
-        }
 
-        const numberQueensNeeded = 8 - numberQueensOnBoard;
+        const numberQueensNeeded = 8 - this.props.queensOnBoard;
         let gameStatus = '♕ add ' + numberQueensNeeded + ' more Queen';
         if (numberQueensNeeded > 1) {
             gameStatus += 's';
@@ -20,16 +15,16 @@ class Status extends Component {
         }
 
         let statusClass = 'EightQueens-playing';
-        if ( numberQueensOnBoard === 8 && numberQueensUnderAttack === 0) {
+        if (this.props.queensOnBoard === 8 && this.props.queensUnderAttack === 0) {
             gameStatus = '😃 SOLVED! YOU WIN! ';
             statusClass = 'EightQueens-win';
         }
 
         return (
             <div className="EightQueens-status">
-                <b>{numberQueensOnBoard}</b> Queens on board
+                <b>{this.props.queensOnBoard}</b> Queens on board
                 <br />
-                <b>{numberQueensUnderAttack}</b> Queens under attack
+                <b>{this.props.queensUnderAttack}</b> Queens under attack
                 <br />
                 <div className={statusClass}>{gameStatus}</div>
             </div>
