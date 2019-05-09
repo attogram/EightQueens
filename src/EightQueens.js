@@ -7,7 +7,7 @@ import Title from './Title.js';
 import queenUnderAttackSvg from './queenUnderAttack.svg';
 
 const gameName     = 'Eight Queens';
-const gameVersion  = '0.0.10';
+const gameVersion  = '0.0.11';
 const gameHome     = 'https://github.com/attogram/EightQueens';
 const debugMode    = true;
 
@@ -73,6 +73,7 @@ class EightQueens extends Component {
                     position={this.state.position}
                     sparePieces={false}
                     draggable={false}
+                    undo={true}
                     calcWidth={({screenWidth}) => (screenWidth < 500 ? 350 : 480)}
                     onSquareClick={this.onSquareClick}
                     pieces={{
