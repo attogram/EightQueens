@@ -1,7 +1,5 @@
 # Future Developments
 
-* integrate in [all-contributors](https://github.com/all-contributors/all-contributors)
-
 * new `favicon.ico`
 
 * add `[New Game]` button
