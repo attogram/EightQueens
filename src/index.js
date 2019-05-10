@@ -9,4 +9,6 @@ ReactDOM.render(<EightQueens />, document.getElementById('root'));
 // Offline-first Progressive Web App
 //  - uses serverWorker for faster page loads and offline play
 //  - See https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-serviceWorker.register();
+//serviceWorker.register();
+
+serviceWorker.unregister();

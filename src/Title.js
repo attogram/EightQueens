@@ -1,3 +1,7 @@
+/**
+ * Eight Queens chess game
+ * Title box
+ */
 import React, { Component } from 'react';
 import './Title.css';
 

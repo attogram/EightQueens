@@ -1,3 +1,6 @@
+/**
+ * Eight Queens chess game
+ */
 import React, { Component } from 'react';
 import './EightQueens.css';
 import * as attack from './UnderAttack.js';
@@ -7,47 +10,66 @@ import Title from './Title.js';
 import queenUnderAttackSvg from './queenUnderAttack.svg';
 
 const gameName     = 'Eight Queens';
-const gameVersion  = '0.0.11';
+const gameVersion  = '0.0.12';
 const gameHome     = 'https://github.com/attogram/EightQueens';
-const debugMode    = true;
 
 class EightQueens extends Component {
+    /**
+     * @param props
+     */
     constructor(props) {
         super(props);
         this.state = {
             attacked: [], // Array of queens under attack
-            position: {}  // Object of current board position
+            position: {}, // Object of current board position
+            unmountChessboard: false // unmount and remount Chessboard
         }
     }
 
+    /**
+     * Player clicked on the chessboard
+     *
+     * @param square
+     */
     onSquareClick = square => {
-        let position = this.state.position;
+        let position = this.state.position; // Get the current board position
         if (position[[square]]) {
-            debug('Deleting Queen: ' + square);
-            delete position[[square]];
+            delete position[[square]]; // Clicked on a Queen, delete it
         } else {
             if (Object.keys(position).length === 8) {
-                return;
+                return; // Max 8 queens on board
             }
-            debug('Adding Queen: ' + square);
-            position[[square]] = 'wQ';
+            position[[square]] = 'wQ'; // Clicked on an empty square, add a Queen
         }
 
-        const attacked = attack.underAttack(position);
-        attacked.forEach(function(square) {
-            debug('UNDER ATTACK: ' + square);
-            position[square] = 'bQ'; // flip queens under attack
+        const attacked = attack.underAttack(position); // get array of Queens under attack
+
+        Object.keys(position).forEach(function(square) { // For each queen on board
+           if (attacked.includes(square) && square !== 'bQ') {   // if Queen is under attack
+               position[square] = 'bQ';                          // Flip Queen under attack
+           } else if (square !== 'wQ') { // If Queen is no longer under attack
+               position[square] = 'wQ'; // Queen at peace
+           }
         });
 
-        this.setState({
+        this.setState({ // unmount <Chessboard> to force updates
+            unmountChessboard: true
+        });
+
+        this.setState({ // remount <Chessboard> with new board position and attacked list
             attacked: attacked,
             position: position
         });
     };
 
+    /**
+     * @returns {*}
+     */
     render() {
-        debug('render: this.state.attacked: ' + JSON.stringify(this.state.attacked));
-        debug('render: this.state.position: ' + JSON.stringify(this.state.position));
+        if (this.state.unmountChessboard) {
+            this.setState({unmountChessboard: false});
+            return (<div className="EightQueens" />);
+        }
 
         const queensOnBoard = Object.keys(this.state.position).length;
         let queensUnderAttack = 0;
@@ -100,11 +122,3 @@ class EightQueens extends Component {
 }
 
 export default EightQueens;
-
-export function debug(message) {
-    if (!debugMode) {
-        return;
-    }
-    const stamp = new Date();
-    console.log(stamp.toISOString() + ': ' + message);
-}

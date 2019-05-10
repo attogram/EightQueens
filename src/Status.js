@@ -1,10 +1,12 @@
+/**
+ * Eight Queens chess game
+ * Status box
+ */
 import React, { Component } from 'react';
 import './Status.css';
 
 class Status extends Component {
-
     render() {
-
         const numberQueensNeeded = 8 - this.props.queensOnBoard;
         let gameStatus = '♕ add ' + numberQueensNeeded + ' more Queen';
         if (numberQueensNeeded > 1) {
