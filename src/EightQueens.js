@@ -4,13 +4,14 @@
 import React, { Component } from 'react';
 import './EightQueens.css';
 import * as attack from './UnderAttack.js';
+import * as helpers from './helpers.js';
 import Chessboard from 'chessboardjsx';
 import Status from './Status.js';
 import Title from './Title.js';
 import queenUnderAttackSvg from './queenUnderAttack.svg';
 
 const gameName    = 'Eight Queens';
-const gameVersion = '0.0.12';
+const gameVersion = '0.1.0';
 const gameHome    = 'https://github.com/attogram/EightQueens';
 
 class EightQueens extends Component {
@@ -22,7 +23,6 @@ class EightQueens extends Component {
         this.state = {
             attacked: [], // Array of queens under attack
             position: {}, // Object of current board position
-            unmountChessboard: false // unmount and remount Chessboard
         }
     }
 
@@ -52,11 +52,7 @@ class EightQueens extends Component {
            }
         });
 
-        this.setState({ // unmount <Chessboard> to force updates
-            unmountChessboard: true
-        });
-
-        this.setState({ // remount <Chessboard> with new board position and attacked list
+        this.setState({
             attacked: attacked,
             position: position
         });
@@ -66,17 +62,13 @@ class EightQueens extends Component {
      * @returns {*}
      */
     render() {
-        if (this.state.unmountChessboard) {
-            this.setState({unmountChessboard: false});
-            return (<div className="EightQueens" />);
-        }
-
+        // force board refresh by using FEN string in _position_ and _key_ Chessboard props
+        const fenPosition = helpers.objToFen(this.state.position);
         const queensOnBoard = Object.keys(this.state.position).length;
         let queensUnderAttack = 0;
         if (this.state.attacked) {
             queensUnderAttack = this.state.attacked.length;
         }
-
         return (
             <div className="EightQueens">
                 <div className="EightQueens-header">
@@ -92,10 +84,10 @@ class EightQueens extends Component {
                 </div>
                 <Chessboard
                     id="EightQueens"
-                    position={this.state.position}
+                    position={fenPosition}
+                    key={fenPosition}
                     sparePieces={false}
                     draggable={false}
-                    undo={true}
                     calcWidth={({screenWidth}) => (screenWidth < 500 ? 350 : 480)}
                     onSquareClick={this.onSquareClick}
                     pieces={{
