@@ -23,6 +23,16 @@
         "question",
         "ideas"
       ]
+    },
+    {
+      "login": "slig",
+      "name": "Tiago Serafim",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/37779?v=4",
+      "profile": "https://github.com/slig",
+      "contributions": [
+        "question",
+        "ideas"
+      ]
     }
   ],
   "contributorsPerLine": 7,
