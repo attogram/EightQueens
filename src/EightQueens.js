@@ -9,9 +9,9 @@ import Status from './Status.js';
 import Title from './Title.js';
 import queenUnderAttackSvg from './queenUnderAttack.svg';
 
-const gameName     = 'Eight Queens';
-const gameVersion  = '0.0.12';
-const gameHome     = 'https://github.com/attogram/EightQueens';
+const gameName    = 'Eight Queens';
+const gameVersion = '0.0.12';
+const gameHome    = 'https://github.com/attogram/EightQueens';
 
 class EightQueens extends Component {
     /**
@@ -112,7 +112,7 @@ class EightQueens extends Component {
                     }}
                 />
                 <p>
-                    - Place <b>Eight Queens</b> so that none are under attack!<br />
+                    - Place <b>Eight Queens</b> with none under attack!<br />
                     - Click a square to place a Queen<br />
                     - Click a Queen to remove it
                 </p>
