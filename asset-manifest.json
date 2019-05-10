@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "./static/css/main.12967dfb.chunk.css",
-    "main.js": "./static/js/main.a58edb5f.chunk.js",
-    "main.js.map": "./static/js/main.a58edb5f.chunk.js.map",
+    "main.js": "./static/js/main.9f33397a.chunk.js",
+    "main.js.map": "./static/js/main.9f33397a.chunk.js.map",
     "runtime~main.js": "./static/js/runtime~main.d653cc00.js",
     "runtime~main.js.map": "./static/js/runtime~main.d653cc00.js.map",
     "static/js/2.83ed55c2.chunk.js": "./static/js/2.83ed55c2.chunk.js",
     "static/js/2.83ed55c2.chunk.js.map": "./static/js/2.83ed55c2.chunk.js.map",
     "index.html": "./index.html",
-    "precache-manifest.0aaf15fb89d9d5527dffd8b0cf9aebfb.js": "./precache-manifest.0aaf15fb89d9d5527dffd8b0cf9aebfb.js",
+    "precache-manifest.c1ba7460193a76a758cf60b3c80c9285.js": "./precache-manifest.c1ba7460193a76a758cf60b3c80c9285.js",
     "service-worker.js": "./service-worker.js",
     "static/css/main.12967dfb.chunk.css.map": "./static/css/main.12967dfb.chunk.css.map",
     "static/media/queenUnderAttack.svg": "./static/media/queenUnderAttack.b80b6116.svg"
