@@ -1,33 +1,24 @@
-# Eight Queens
+[![Eight Queens](https://raw.githubusercontent.com/attogram/attogram-docs/master/EightQueens/EightQueens.small.png)](https://github.com/attogram/EightQueens)
+
 [![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors)
 
-_Beta Release_
+Welcome to the **Eight Queens** chess game
 
-Welcome to the **Eight Queens** chess game.
+Can you place 8 Queens on the chess board, 
+with none of the queens under attack?
 
-## How to play
-
-Place eight queens onto the chess board, 
-with none of the queens under attack!
-
-Live demo:
+Play Now:
 **<https://attogram.github.io/EightQueens/>**
-
-## Deployment
-
-### Pre-built version
-
-The `gh-pages` branch contains a pre-built
-version of **Eight Queens** ready for deployment to your web server.
-
-See: <https://github.com/attogram/EightQueens/tree/gh-pages>
 
 ## License
 
 **Eight Queens** is an open source project
 licensed under the MIT License.
 
+
 ## Developer Info
+
+### Project info
 
 The main Eight Queens Git repository is:
 <https://github.com/attogram/EightQueens>
@@ -35,6 +26,13 @@ The main Eight Queens Git repository is:
 Eight Queens is built with [React](https://reactjs.org/).
 
 Eight Queens was bootstrapped with [create-react-app](https://facebook.github.io/create-react-app/)
+
+### Pre-built version for deployment
+
+The `gh-pages` branch contains a pre-built
+version of **Eight Queens** ready for deployment to your web server.
+
+See: <https://github.com/attogram/EightQueens/tree/gh-pages>
 
 ### Install dependencies
 
