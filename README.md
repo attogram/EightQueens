@@ -23,9 +23,10 @@ Contributions welcome!
 The main Eight Queens Git repository is:
 <https://github.com/attogram/EightQueens>
 
-Eight Queens is built with [React](https://reactjs.org/).
+Eight Queens is built with [React](https://reactjs.org/),
+and bootstrapped with [create-react-app](https://facebook.github.io/create-react-app/).
 
-Eight Queens was bootstrapped with [create-react-app](https://facebook.github.io/create-react-app/)
+Eight Queens uses [Chessboard.jsx](https://github.com/willb335/chessboardjsx).
 
 ### Pre-built version for deployment
 
