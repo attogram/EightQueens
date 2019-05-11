@@ -7,11 +7,12 @@ import * as attack from './UnderAttack.js';
 import * as helpers from './helpers.js';
 import Chessboard from 'chessboardjsx';
 import Status from './Status.js';
+import Timer from './Timer.js';
 import Title from './Title.js';
 import queenUnderAttackSvg from './queenUnderAttack.svg';
 
 const gameName    = 'Eight Queens';
-const gameVersion = '0.1.1';
+const gameVersion = '0.2.0';
 const gameHome    = 'https://github.com/attogram/EightQueens';
 
 class EightQueens extends Component {
@@ -23,6 +24,9 @@ class EightQueens extends Component {
         this.state = {
             attacked: [], // Array of queens under attack
             position: {}, // Object of current board position
+            gameStatus: 'playing',
+            queensOnBoard: 0,
+            queensUnderAttack: 0,
         }
     }
 
@@ -52,9 +56,22 @@ class EightQueens extends Component {
            }
         });
 
+        let queensOnBoard = Object.keys(position).length;
+        let queensUnderAttack = 0;
+        if (attacked) {
+            queensUnderAttack = attacked.length;
+        }
+        let gameStatus = 'playing';
+        if (queensOnBoard === 8 && queensUnderAttack === 0) {
+            gameStatus = 'solved';
+        }
+
         this.setState({
             attacked: attacked,
-            position: position
+            position: position,
+            queensOnBoard: queensOnBoard,
+            queensUnderAttack: queensUnderAttack,
+            gameStatus: gameStatus,
         });
     };
 
@@ -64,11 +81,6 @@ class EightQueens extends Component {
     render() {
         // force board refresh by using FEN string in _position_ and _key_ Chessboard props
         const fenPosition = helpers.objToFen(this.state.position);
-        const queensOnBoard = Object.keys(this.state.position).length;
-        let queensUnderAttack = 0;
-        if (this.state.attacked) {
-            queensUnderAttack = this.state.attacked.length;
-        }
         return (
             <div className="EightQueens">
                 <div className="EightQueens-header">
@@ -78,8 +90,8 @@ class EightQueens extends Component {
                         gameVersion={gameVersion}
                     />
                     <Status
-                        queensOnBoard={queensOnBoard}
-                        queensUnderAttack={queensUnderAttack}
+                        queensOnBoard={this.state.queensOnBoard}
+                        queensUnderAttack={this.state.queensUnderAttack}
                     />
                 </div>
                 <Chessboard
@@ -102,6 +114,9 @@ class EightQueens extends Component {
                             />
                         )
                     }}
+                />
+                <Timer
+                    gameStatus={this.state.gameStatus}
                 />
                 <p>
                     - Place <b>Eight Queens</b> with none under attack!<br />

@@ -1,7 +1,5 @@
 # Future Developments
 
-* timer that starts on page load and stops when a solution is found
-
 * `[New Game]` button
 
 * `[Easy Mode]` option:
@@ -10,3 +8,5 @@
   
 * add notice to this project from old
   [attogram/8queens](https://github.com/attogram/8queens) repo
+
+* restart timer if solved game becomes unsolved due to queen removal
