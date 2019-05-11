@@ -3,10 +3,10 @@
 [![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors)
 
 Welcome to the **Eight Queens** chess game.
-A web game inspired by the dreaded programmers interview question.
 
-Can you place 8 Queens on the chess board, 
-with none of the queens under attack?
+Can you place 8 Queens on the chess board, with none of the queens under attack?
+
+A web game inspired by the dreaded programmers interview question.
 
 Play Now:
 **<https://attogram.github.io/EightQueens/>**
