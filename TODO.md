@@ -1,7 +1,5 @@
 # Future Developments
 
-* new `favicon.ico`
-
 * timer that starts on page load and stops when a solution is found
 
 * `[New Game]` button

@@ -11,7 +11,7 @@ import Title from './Title.js';
 import queenUnderAttackSvg from './queenUnderAttack.svg';
 
 const gameName    = 'Eight Queens';
-const gameVersion = '0.1.0';
+const gameVersion = '0.1.1';
 const gameHome    = 'https://github.com/attogram/EightQueens';
 
 class EightQueens extends Component {
