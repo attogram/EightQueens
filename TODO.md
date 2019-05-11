@@ -2,9 +2,11 @@
 
 * new `favicon.ico`
 
-* add `[New Game]` button
+* timer that starts on page load and stops when a solution is found
 
-* add `[Easy Mode]` option:
+* `[New Game]` button
+
+* `[Easy Mode]` option:
   show all attack paths of current queens on board
   via change of square color.
   

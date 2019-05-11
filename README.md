@@ -2,7 +2,8 @@
 
 [![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors)
 
-Welcome to the **Eight Queens** chess game
+Welcome to the **Eight Queens** chess game.
+Inspired by the dreaded programmers interview question.
 
 Can you place 8 Queens on the chess board, 
 with none of the queens under attack?
@@ -15,10 +16,9 @@ Play Now:
 **Eight Queens** is an open source project
 licensed under the MIT License.
 
-
 ## Developer Info
 
-### Project info
+Contributions welcome!
 
 The main Eight Queens Git repository is:
 <https://github.com/attogram/EightQueens>
