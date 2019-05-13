@@ -6,13 +6,14 @@ import './EightQueens.css';
 import * as attack from './UnderAttack.js';
 import * as helpers from './helpers.js';
 import Chessboard from 'chessboardjsx';
+import DidYouKnow from "./DidYouKnow";
 import Status from './Status.js';
 import Timer from './Timer.js';
 import Title from './Title.js';
 import queenUnderAttackSvg from './queenUnderAttack.svg';
 
 const gameName    = 'Eight Queens';
-const gameVersion = '0.2.0';
+const gameVersion = '0.3.0';
 const gameHome    = 'https://github.com/attogram/EightQueens';
 
 class EightQueens extends Component {
@@ -123,6 +124,7 @@ class EightQueens extends Component {
                     - Click a square to place a Queen<br />
                     - Click a Queen to remove it
                 </p>
+                <DidYouKnow />
             </div>
         );
     }
