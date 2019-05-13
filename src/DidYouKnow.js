@@ -32,7 +32,7 @@ class DidYouKnow extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            tidbit: 'Welcome to the Eight Queens chess game.'
+            tidbit: ''
         };
 
         this.tick = this.tick.bind(this)

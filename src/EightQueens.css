@@ -8,4 +8,9 @@
 .EightQueens-header {
   display: flex;
   flex-direction: row;
+  margin: 0 0 5px 0;
+}
+
+.EightQueens-instructions {
+  font-size: 90%;
 }

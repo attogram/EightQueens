@@ -34,15 +34,14 @@ class Timer extends Component {
         }
 
         const seconds = Math.floor((this.state.currentTime - this.state.startTime) / 1000);
-        //const minutes = Math.floor(seconds/60);
-        //const hours = Math.floor(minutes/60);
-        //const days = Math.floor(hours/24);
 
         return (
             <div className="EightQueens-timer">
-                <small>{this.props.gameStatus} </small>
-                {seconds}
-                <small> seconds</small>
+                <small>{this.props.gameStatus}</small>
+                <br />
+                <b>{seconds}</b>
+                <br />
+                <small>seconds</small>
             </div>
         );
     }
