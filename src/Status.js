@@ -14,13 +14,15 @@ class Status extends Component {
         }
         gameStatus += ' needed';
 
+        let statusClass = 'EightQueens-playing';
+
         if (!numberQueensNeeded) {
-            gameStatus = '🙁 Not Solved'
+            gameStatus = 'Not Solved';
+            statusClass = 'EightQueens-not';
         }
 
-        let statusClass = 'EightQueens-playing';
         if (this.props.queensOnBoard === 8 && this.props.queensUnderAttack === 0) {
-            gameStatus = '😃 SOLVED! YOU WIN 😃';
+            gameStatus = '😃 SOLVED! YOU WIN';
             statusClass = 'EightQueens-win';
         }
 
