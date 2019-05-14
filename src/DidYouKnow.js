@@ -13,7 +13,7 @@ const tidbits = [
     "Franz Nauck published the first solutions to the eight queens puzzle in 1850.",
     "Many mathematicians, including Carl Friedrich Gauss, have worked on both the eight queens puzzle and its generalized n-queens version.",
     "In 1874, S. Gunther proposed a method using determinants to find solutions.",
-    "In 1972, Edsger Dijkstra used this problem to illustrate the power structured programming.",
+    "In 1972, Edsger Dijkstra used the eight queens problem to illustrate the power of structured programming.",
     "The problem of finding all solutions to the 8-queens problem can be computationally expensive.",
     "There are 4,426,165,368 possible arrangements of eight queens on an 8×8 board.",
     "There are 92 solutions to to the eight queens problem!",
