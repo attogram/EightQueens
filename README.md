@@ -1,6 +1,6 @@
 [![Eight Queens](https://raw.githubusercontent.com/attogram/attogram-docs/master/EightQueens/EightQueens.small.png)](https://github.com/attogram/EightQueens)
 
-[![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors)
 
 Welcome to the **Eight Queens** chess game.
 
@@ -75,7 +75,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore -->
-<table><tr><td align="center"><a href="https://patreon.com/attogram"><img src="https://avatars0.githubusercontent.com/u/8653063?v=4" width="100px;" alt="Attogram Project"/><br /><sub><b>Attogram Project</b></sub></a><br /><a href="https://github.com/attogram/EightQueens/commits?author=attogram" title="Code">💻</a></td><td align="center"><a href="https://github.com/willb335"><img src="https://avatars2.githubusercontent.com/u/10157307?v=4" width="100px;" alt="Will"/><br /><sub><b>Will</b></sub></a><br /><a href="#question-willb335" title="Answering Questions">💬</a> <a href="#ideas-willb335" title="Ideas, Planning, & Feedback">🤔</a></td><td align="center"><a href="https://github.com/slig"><img src="https://avatars1.githubusercontent.com/u/37779?v=4" width="100px;" alt="Tiago Serafim"/><br /><sub><b>Tiago Serafim</b></sub></a><br /><a href="#question-slig" title="Answering Questions">💬</a> <a href="#ideas-slig" title="Ideas, Planning, & Feedback">🤔</a></td></tr></table>
+<table><tr><td align="center"><a href="https://attogram.github.io/"><img src="https://avatars0.githubusercontent.com/u/8653063?v=4" width="100px;" alt="Attogram Project"/><br /><sub><b>Attogram Project</b></sub></a><br /><a href="https://github.com/attogram/EightQueens/commits?author=attogram" title="Code">💻</a></td><td align="center"><a href="https://github.com/willb335"><img src="https://avatars2.githubusercontent.com/u/10157307?v=4" width="100px;" alt="Will"/><br /><sub><b>Will</b></sub></a><br /><a href="#question-willb335" title="Answering Questions">💬</a> <a href="#ideas-willb335" title="Ideas, Planning, & Feedback">🤔</a></td><td align="center"><a href="https://github.com/slig"><img src="https://avatars1.githubusercontent.com/u/37779?v=4" width="100px;" alt="Tiago Serafim"/><br /><sub><b>Tiago Serafim</b></sub></a><br /><a href="#question-slig" title="Answering Questions">💬</a> <a href="#ideas-slig" title="Ideas, Planning, & Feedback">🤔</a></td><td align="center"><a href="https://github.com/cityseven"><img src="https://avatars3.githubusercontent.com/u/49065505?v=4" width="100px;" alt="cityseven"/><br /><sub><b>cityseven</b></sub></a><br /><a href="https://github.com/attogram/EightQueens/issues?q=author%3Acityseven" title="Bug reports">🐛</a> <a href="https://github.com/attogram/EightQueens/commits?author=cityseven" title="Code">💻</a></td></tr></table>
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
