@@ -13,7 +13,7 @@ import Title from './Title.js';
 import queenUnderAttackSvg from './queenUnderAttack.svg';
 
 const gameName    = 'Eight Queens';
-const gameVersion = '0.3.4';
+const gameVersion = '0.3.5';
 const gameHome    = 'https://github.com/attogram/EightQueens';
 
 class EightQueens extends Component {
@@ -121,9 +121,12 @@ class EightQueens extends Component {
                 />
                 <DidYouKnow />
                 <div className="EightQueens-instructions">
-                    - Place <b>Eight Queens</b> with none under attack!<br />
-                    - Click a square to place a Queen<br />
-                    - Click a Queen to remove it
+                    - Place <b>Eight Queens</b> with none under attack!
+                    <br />
+                    - Click a square to place a Queen. Click a Queen to remove it
+                </div>
+                <div className="EightQueens-restart">
+                    <a href="." >restart</a>
                 </div>
             </div>
         );

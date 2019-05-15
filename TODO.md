@@ -1,7 +1,5 @@
 # Future Developments
 
-* `[New Game]` button
-
 * `[Easy Mode]` option:
   show all attack paths of current queens on board
   via change of square color.

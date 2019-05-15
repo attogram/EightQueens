@@ -14,3 +14,15 @@
 .EightQueens-instructions {
   font-size: 90%;
 }
+
+.EightQueens-restart {
+  margin-top: 8px;
+}
+
+.EightQueens-restart a {
+  border: 1px solid darkgrey;
+  color: darkgrey;
+  font-size: 85%;
+  padding: 5px;
+  text-decoration: none;
+}
