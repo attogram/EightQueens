@@ -6,26 +6,59 @@ import React, { Component } from 'react';
 import './DidYouKnow.css';
 
 const tidbits = [
-    // following tidbits modified from https://en.wikipedia.org/wiki/Eight_queens_puzzle
+    // following tidbits modified from <https://en.wikipedia.org/wiki/Eight_queens_puzzle>
     // License: Creative Commons Attribution-ShareAlike License
     "The eight queens puzzle is an example of the n queens problem of placing n non-attacking queens on an n×n chessboard.",
     "Chess composer Max Bezzel published the original eight queens puzzle in 1848.",
     "Franz Nauck published the first solutions to the eight queens puzzle in 1850.",
-    "Many mathematicians, including Carl Friedrich Gauss, have worked on both the eight queens puzzle and its generalized n-queens version.",
+    "Many mathematicians, including Carl Friedrich Gauss, have worked on the 8 queens puzzle and its generalized n-queens version.",
     "In 1874, S. Gunther proposed a method using determinants to find solutions to the eight queens puzzle.",
     "In 1972, Edsger Dijkstra used the eight queens problem to illustrate the power of structured programming.",
     "The problem of finding all solutions to the 8-queens problem can be computationally expensive.",
     "There are 4,426,165,368 possible arrangements of eight queens on an 8×8 board.",
     "There are 92 solutions to the eight queens problem!",
-    "If solutions that differ only by the symmetry operations of rotation and reflection are counted as one, the puzzle has 12 solutions.",
-    "A fundamental solution usually has eight variants (including its original form) obtained by rotating 90, 180, or 270° and then reflecting each of the four rotational variants in a mirror in a fixed position.",
+    "There are only 12 fundamental solutions if you ignore symmetry operations, rotation and reflection",
+    "A fundamental solution usually has eight variants.",
     "Finding all solutions to the eight queens puzzle is a good example of a simple but nontrivial problem.",
-    "Eight queens is often used as an example problem for various programming techniques, including nontraditional approaches such as constraint programming, logic programming or genetic algorithms.",
-    "Eight queens can be solved with a recursive algorithm, by phrasing the n queens problem inductively in terms of adding a single queen to any solution to the problem of placing n−1 queens on an n×n chessboard.",
+    "Eight queens is often used as an example problem for programming techniques.",
+    "8 queens is often an example problem for constraint programming, logic programming and genetic algorithms.",
+    "Eight queens can be solved with a recursive algorithm.",
     "In 1976 Niklaus Wirth wrote a Pascal program to find one solution to the eight queens puzzle",
-    // following tidbits from Attogram Project:
+    // following tidbits modified from <http://csplib.org/Problems/prob054/>
+    //   by Bilal Syed Hussain
+    // License: Creative Commons Attribution 4.0 International License.
+    "The eight queens problem is extremely well studied in the mathematical literature.",
+    "In chess a queen attacks other squares on the same row, column, or either diagonal as itself.",
+    "The n-queens problem is to find a set of n locations on a chessboard, no two of which are on the same row, column or diagonal.",
+    "The eight queens problem has inherent symmetry.",
+    "For any solution we obtain another solution by any of the 8 symmetries of the chessboard.",
+    "The n-queens problem is solvable for n=1 and n≥4.",
+    "A solution to the n-queens problem for any n≠2,3 was given in 1874 by Pauls.",
+    "The parameter n for n-queens only needs log(n) bits to specify, so O(n) is exponential in the input size.",
+    "The number of symmetrically distinct solutions to the n-queens problem is Sequence number A002562 in the On-Line Encyclopedia of Integer Sequences.",
+    "The number of solutions to the n-queens problem is Sequence number A000170 in the On-Line Encyclopedia of Integer Sequences.",
+    // following tidbits modified from:
+    //   Taheri Sarvetamin M, Khatibi A, Zahedi MA.
+    //   A New Approach to Solve N-Queen Problem with Parallel Genetic Algorithm.
+    //   J. ADV COMP ENG TECHNOL, 4(2) Spring 2018 : 69-78
+    // License: Creative Commons Attribution 4.0 International Licence.
+    "The N-Queen problem is a well-known CSP problem.",
+    "Traditional methods of solving the N-queens problem are based on back-tracking.",
+    "The N-Queen problem shows a large class of nondeterministic problems that cannot be solved using deterministic algorithms in reasonable time.",
+    "Many algorithms and methods have been used to resolve the n-Queen problem.",
+    "Ahrabian et al. used the DNA Sticker algorithm to resolve the n-Queen problem.",
+    "Khan et al. used the ant colony algorithm to solvethe n-Queen problem.",
+    "Farhan et al. used a genetic algorithm to solve this problem and found all 92 possible solutions to the 8-queen problem.",
+    "A depth-first search backtracking algorithm may resolve the n-Queens problem in acceptable time, but just for small values of n.",
+    "The n-Queen problem can be successfully run with parallel genetic algorithms.",
+    "The n-Queens problem is a traditional intractable problem that is used to discuss numerous kinds of searching problems.",
+    // following tidbits from EightQueens contributors:
     "Hint: how does a knight move?",
     "Is it a chess puzzle, a chess problem, or a chess game?  Who cares, just play!",
+    "Of the 92 possible solutions, there are 12 fundamental solutions.",
+    "How to programmatically solve the 8 Queens problem is often used as a test during programmer interviews.",
+    "How to programmatically solve the 8 Queens problem is often used as an assignment in computer science classes.",
+    "Mathematicians love eight queens.",
 ];
 
 class DidYouKnow extends Component {
@@ -39,7 +72,7 @@ class DidYouKnow extends Component {
     }
 
     componentDidMount(){
-        this.timer = setInterval(this.tick, 5000); // 5 seconds
+        this.timer = setInterval(this.tick, 7000); // 7 seconds
     }
 
     componentWillUnmount(){
