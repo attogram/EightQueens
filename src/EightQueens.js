@@ -13,7 +13,7 @@ import Title from './Title.js';
 import queenUnderAttackSvg from './queenUnderAttack.svg';
 
 const gameName    = 'Eight Queens';
-const gameVersion = '0.3.6';
+const gameVersion = '0.4.0';
 const gameHome    = 'https://github.com/attogram/EightQueens';
 
 class EightQueens extends Component {
@@ -28,7 +28,11 @@ class EightQueens extends Component {
             gameStatus: 'playing',
             queensOnBoard: 0,
             queensUnderAttack: 0,
-        }
+            showAttackPaths: false,
+            attackedSquares: 0,
+        };
+        this.onSquareClick = this.onSquareClick.bind(this);
+        this.toggleAttackPaths = this.toggleAttackPaths.bind(this);
     }
 
     /**
@@ -72,9 +76,25 @@ class EightQueens extends Component {
             position: position,
             queensOnBoard: queensOnBoard,
             queensUnderAttack: queensUnderAttack,
+            attackedSquares: attack.attackedSquares(position),
             gameStatus: gameStatus,
         });
     };
+
+    /**
+     * Play clicked the Attack Paths button
+     */
+    toggleAttackPaths() {
+        const showAttackPaths = !this.state.showAttackPaths;
+        let attackedSquares = this.state.attackedSquares;
+        if (!showAttackPaths) {
+            attackedSquares = attack.attackedSquares(this.state.position);
+        }
+        this.setState({
+            showAttackPaths: showAttackPaths,
+            attackedSquares: attackedSquares,
+        });
+    }
 
     /**
      * @returns {*}
@@ -82,6 +102,21 @@ class EightQueens extends Component {
     render() {
         // force board refresh by using FEN string in _position_ and _key_ Chessboard props
         const fenPosition = helpers.objToFen(this.state.position);
+
+        // Highlight squares under attack
+        let squareStyles = {};
+        let showAttackPathsText = 'Show';
+        if (this.state.showAttackPaths) {
+            showAttackPathsText = 'Hide';
+            if (this.state.attackedSquares.length) {
+                this.state.attackedSquares.forEach(function(square) {
+                    squareStyles[square]= {
+                        background: "radial-gradient(circle, orange, transparent 50%)",
+                    };
+                });
+            }
+        }
+
         return (
             <div className="EightQueens">
                 <div className="EightQueens-header">
@@ -106,6 +141,7 @@ class EightQueens extends Component {
                     draggable={false}
                     calcWidth={({screenWidth}) => (screenWidth < 500 ? 350 : 480)}
                     onSquareClick={this.onSquareClick}
+                    squareStyles={squareStyles}
                     pieces={{
                         bQ: ({ squareWidth, isDragging }) => (
                             <img
@@ -123,10 +159,18 @@ class EightQueens extends Component {
                 <div className="EightQueens-instructions">
                     - Place <b>Eight Queens</b> with none under attack!
                     <br />
-                    - Click a square to place a Queen. Click a Queen to remove it
+                    - Click a square to place a Queen. Click a Queen to remove it.
                 </div>
-                <div className="EightQueens-restart">
-                    <a href="." >restart</a>
+                <div className="EightQueens-header">
+                    <button
+                        className="EightQueens-paths"
+                        onClick={this.toggleAttackPaths}
+                    >
+                        {showAttackPathsText} attack paths
+                    </button>
+                    <button className="EightQueens-restart">
+                        <a href="." >Restart</a>
+                    </button>
                 </div>
             </div>
         );

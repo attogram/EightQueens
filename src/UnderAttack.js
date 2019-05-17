@@ -17,6 +17,19 @@ export function underAttack(position) {
     return attacked;
 }
 
+export function attackedSquares(position) {
+    let attackedSquares = [];
+    Object.keys(position).forEach(function(square) {
+        getQueenPaths(square).forEach(function(square) {
+            if (attackedSquares.indexOf(square) === -1) {
+                attackedSquares.push(square);
+            }
+        });
+    });
+
+    return attackedSquares;
+}
+
 /**
  * Get all possible attack paths of a Queen
  *

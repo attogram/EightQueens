@@ -15,14 +15,22 @@
   font-size: 90%;
 }
 
+.EightQueens-paths {
+  color: #373737;
+  font-size: 12px;
+  margin: 8px 15px 0 0;
+  padding: 4px;
+}
+
 .EightQueens-restart {
-  margin-top: 8px;
+  font-size: 12px;
+  margin: 8px 0 0 0;
 }
 
 .EightQueens-restart a {
-  border: 1px solid darkgrey;
-  color: darkgrey;
-  font-size: 85%;
-  padding: 5px;
+  color: #373737;
+  padding: 4px;
   text-decoration: none;
 }
+
+
