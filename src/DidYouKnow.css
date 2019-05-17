@@ -1,5 +1,7 @@
 .EightQueens-didyouknow {
     color: saddlebrown;
-    font-size: 14px;
+    font-family: "Times New Roman", serif;
+    font-size: 90%;
     margin: 5px 0 5px 0;
+    max-width: 500px;
 }

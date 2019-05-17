@@ -1,6 +1,7 @@
 .EightQueens-status {
     font-size: 14px;
     margin: 0 20px 0 0;
+    white-space: nowrap;
 }
 
 .EightQueens-playing {
