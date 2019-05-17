@@ -1,4 +1,4 @@
-[![Eight Queens](https://raw.githubusercontent.com/attogram/attogram-docs/master/EightQueens/EightQueens.small.png)](https://github.com/attogram/EightQueens)
+[![Eight Queens](https://raw.githubusercontent.com/attogram/attogram-docs/master/EightQueens/EightQueens.png)](https://github.com/attogram/EightQueens)
 
 [![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors)
 
