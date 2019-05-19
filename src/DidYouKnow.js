@@ -10,7 +10,7 @@ const tidbits = [
     // License: Creative Commons Attribution-ShareAlike License
     "The eight queens puzzle is an example of the n queens problem of placing n non-attacking queens on an n×n chessboard.",
     "Chess composer Max Bezzel published the original eight queens puzzle in 1848.",
-    "Franz Nauck published the a solutions to the eight queens puzzle in 1850.",
+    "Franz Nauck published a solution to the eight queens puzzle in 1850.",
     "Many mathematicians, including Carl Friedrich Gauss, have worked on the 8 queens puzzle and its generalized n-queens version.",
     "In 1874, S. Gunther proposed a method using determinants to find solutions to the eight queens puzzle.",
     "In 1972, Edsger Dijkstra used the eight queens problem to illustrate the power of structured programming.",
@@ -42,7 +42,7 @@ const tidbits = [
     //   A New Approach to Solve N-Queen Problem with Parallel Genetic Algorithm.
     //   J. ADV COMP ENG TECHNOL, 4(2) Spring 2018 : 69-78
     // License: Creative Commons Attribution 4.0 International Licence.
-    "The N-Queen problem is a well-known CSP problem.",
+    "The N-Queen problem is a well-known Constraint Satisfaction Problem.",
     "Traditional methods of solving the N-queens problem are based on back-tracking.",
     "The N-Queen problem shows a large class of nondeterministic problems that cannot be solved using deterministic algorithms in reasonable time.",
     "Many algorithms and methods have been used to resolve the n-Queen problem.",
