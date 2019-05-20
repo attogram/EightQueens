@@ -1,19 +1,21 @@
 /**
  * Eight Queens chess game
  */
-import React, { Component } from 'react';
+
 import './EightQueens.css';
 import * as attack from './UnderAttack.js';
 import * as helpers from './helpers.js';
 import Chessboard from 'chessboardjsx';
-import DidYouKnow from "./DidYouKnow";
+import didYouKnowArray from './DidYouKnow.js';
+import queenUnderAttackSvg from './queenUnderAttack.svg';
+import React, { Component } from 'react';
 import Status from './Status.js';
+import Tidbits from './Tidbits';
 import Timer from './Timer.js';
 import Title from './Title.js';
-import queenUnderAttackSvg from './queenUnderAttack.svg';
 
 const gameName    = 'Eight Queens';
-const gameVersion = '0.4.3';
+const gameVersion = '0.4.4';
 const gameHome    = 'https://github.com/attogram/EightQueens';
 
 class EightQueens extends Component {
@@ -155,7 +157,13 @@ class EightQueens extends Component {
                         )
                     }}
                 />
-                <DidYouKnow />
+                <div className="EightQueens-didyouknow">
+                    <Tidbits
+                        interval="8000"
+                        order="random"
+                        tidbits={didYouKnowArray}
+                    />
+                </div>
                 <div className="EightQueens-instructions">
                     - Place <b>Eight Queens</b> with none under attack!
                     <br />

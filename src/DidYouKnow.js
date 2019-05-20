@@ -1,11 +1,10 @@
 /**
  * Eight Queens chess game
- * Did You Know box
+ * Did You Know
  */
-import React, { Component } from 'react';
-import './DidYouKnow.css';
 
-const tidbits = [
+const didYouKnow = [
+    "",
     // following tidbits modified from <https://en.wikipedia.org/wiki/Eight_queens_puzzle>
     // License: Creative Commons Attribution-ShareAlike License
     "The eight queens puzzle is an example of the n queens problem of placing n non-attacking queens on an n×n chessboard.",
@@ -72,36 +71,4 @@ const tidbits = [
     "Help, I'm stuck inside an interactive, virtualized, modularized cloud-based chess game!",
 ];
 
-class DidYouKnow extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            tidbit: ''
-        };
-
-        this.tick = this.tick.bind(this)
-    }
-
-    componentDidMount(){
-        this.timer = setInterval(this.tick, 8000); // 8 seconds, of course
-    }
-
-    componentWillUnmount(){
-        clearInterval(this.timer);
-    }
-
-    tick() {
-        const tidbit = tidbits[Math.floor(Math.random() * (tidbits.length))];
-        this.setState({ tidbit: tidbit });
-    }
-
-    render() {
-        return (
-            <div className="EightQueens-didyouknow">
-                {this.state.tidbit}
-            </div>
-        );
-    }
-}
-
-export default DidYouKnow;
+export default didYouKnow;
