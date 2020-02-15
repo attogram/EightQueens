@@ -6,15 +6,14 @@ Welcome to the **Eight Queens** chess game.
 
 Can you place 8 Queens on the chess board, with none of the queens under attack?
 
-A web game inspired by the dreaded programmers interview question.
+A web game inspired by the classic math problem.
 
 Play Now:
 **<https://attogram.github.io/EightQueens/>**
 
 ## License
 
-**Eight Queens** is an open source project
-licensed under the MIT License.
+**Eight Queens** is an open source project licensed under the MIT License.
 
 ## Developer Info
 
