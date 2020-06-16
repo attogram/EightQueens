@@ -70,9 +70,9 @@ Launches the test runner in the interactive watch mode.
 
 ### Updating
 
-To update react libraries:
+* `yarn add react-scripts@latestnpm` or `npm install react-scripts@latest`
 
-`yarn add react-scripts@latestnpm` or `npm install react-scripts@latest`
+Updates the internal react libraries.
 
 ## Contributors
 
