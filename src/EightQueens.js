@@ -15,7 +15,7 @@ import Timer from './Timer.js';
 import Title from './Title.js';
 
 const gameName    = 'Eight Queens';
-const gameVersion = '0.5.0';
+const gameVersion = '0.6.0';
 const gameHome    = 'https://github.com/attogram/EightQueens';
 
 class EightQueens extends Component {

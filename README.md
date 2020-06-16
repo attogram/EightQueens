@@ -68,6 +68,12 @@ You will also see any lint errors in the console.
 
 Launches the test runner in the interactive watch mode.
 
+### Updating
+
+* `yarn add react-scripts@latestnpm` or `npm install react-scripts@latest`
+
+Updates the internal react libraries.
+
 ## Contributors
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
